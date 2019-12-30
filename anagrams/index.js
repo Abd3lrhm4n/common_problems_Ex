@@ -9,13 +9,22 @@
 //   anagrams('Hi there', 'Bye there') --> False
 
 function anagrams(stringA, stringB) {
-    var stringA = stringA.match(/[a-zA-Z]/g)
-    var stringB = stringB.match(/[a-zA-Z]/g)
 
-    console.log(stringB)
-    console.log(stringA)
+    // lower case all letters then get only alphabets with regex then sort 
+    var stringA = stringA.toLowerCase().match(/[a-zA-Z]/g).sort()
+    var stringB = stringB.toLowerCase().match(/[a-zA-Z]/g).sort()
+
+    for (let i = 0; i < stringA.length; i++) {
+
+        // if character in the same index in sorted array not equal return
+        if (stringA[i] !== stringB[i]) {
+            return false
+        }
+    }
+
+    return true
 }
 
-anagrams('hello3!','hwoe34@')
+anagrams('One One','Two two two')
 
 module.exports = anagrams;
