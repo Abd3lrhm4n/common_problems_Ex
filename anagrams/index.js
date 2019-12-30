@@ -11,18 +11,10 @@
 function anagrams(stringA, stringB) {
 
     // lower case all letters then get only alphabets with regex then sort 
-    var stringA = stringA.toLowerCase().match(/[a-zA-Z]/g).sort()
-    var stringB = stringB.toLowerCase().match(/[a-zA-Z]/g).sort()
+    var stringA = stringA.toLowerCase().match(/[a-zA-Z]/g).sort().join('')
+    var stringB = stringB.toLowerCase().match(/[a-zA-Z]/g).sort().join('')
 
-    for (let i = 0; i < stringA.length; i++) {
-
-        // if character in the same index in sorted array not equal return
-        if (stringA[i] !== stringB[i]) {
-            return false
-        }
-    }
-
-    return true
+    return stringA === stringB
 }
 
 anagrams('One One','Two two two')
