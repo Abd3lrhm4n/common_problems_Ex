@@ -17,6 +17,4 @@ function anagrams(stringA, stringB) {
     return stringA === stringB
 }
 
-anagrams('One One','Two two two')
-
 module.exports = anagrams;
