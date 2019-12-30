@@ -1,2 +1,1 @@
-
-echo "# common problems Ex" >> README.md
+# common problems Ex
