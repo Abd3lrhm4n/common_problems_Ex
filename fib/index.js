@@ -23,5 +23,5 @@ function recursiveFib(n){
 
     return recursiveFib(n - 2) + recursiveFib(n - 1)
 }
-
+console.log(fib(8))
 module.exports = fib;
